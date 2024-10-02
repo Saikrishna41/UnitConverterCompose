@@ -1,5 +1,6 @@
 package com.task.unitconverter
 
+import android.util.Log
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -10,13 +11,14 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 
 //naver pass viewmodel as parameter to composable
 
+private const val TAG = "TAGSS"
 @Composable
 fun BaseScreen(
     modifier: Modifier = Modifier,
     converterViewModel: ConverterViewModel = viewModel()
 ) {
     val conversionsList = converterViewModel.getConversions()
-    TopScreen(list = conversionsList)
+    TopScreen(modifier,list = conversionsList)
     Spacer(
         modifier = Modifier
             .fillMaxWidth()

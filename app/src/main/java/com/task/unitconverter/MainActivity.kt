@@ -20,10 +20,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             UnitConverterTheme {
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    BaseScreen(modifier = Modifier.fillMaxSize().padding(innerPadding))
                 }
             }
         }
